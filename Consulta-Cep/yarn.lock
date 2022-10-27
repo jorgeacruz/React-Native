@@ -2122,6 +2122,11 @@ big-integer@1.6.x:
   resolved "https://registry.npmjs.org/big-integer/-/big-integer-1.6.51.tgz"
   integrity sha512-GPEid2Y9QU1Exl1rpO9B2IPJGHPSupF5GnVIP0blYvNOMer2bTvSWs1jGOUg04hTmu67nmLsQ9TBo1puaotBHg==
 
+bignumber.js@^9.0.1:
+  version "9.1.0"
+  resolved "https://registry.yarnpkg.com/bignumber.js/-/bignumber.js-9.1.0.tgz#8d340146107fe3a6cb8d40699643c302e8773b62"
+  integrity sha512-4LwHK4nfDOraBCtst+wOWIHbu1vhvAPJK8g8nROd4iuc3PSEjWif/qwbkh8jwCJz6yDBvtU4KPynETgrfh7y3A==
+
 bl@^4.1.0:
   version "4.1.0"
   resolved "https://registry.npmjs.org/bl/-/bl-4.1.0.tgz"
@@ -5356,6 +5361,13 @@ react-native-gradle-plugin@^0.0.7:
   version "0.0.7"
   resolved "https://registry.npmjs.org/react-native-gradle-plugin/-/react-native-gradle-plugin-0.0.7.tgz"
   integrity sha512-+4JpbIx42zGTONhBTIXSyfyHICHC29VTvhkkoUOJAh/XHPEixpuBduYgf6Y4y9wsN1ARlQhBBoptTvXvAFQf5g==
+
+react-native-mask-text@^0.13.1:
+  version "0.13.1"
+  resolved "https://registry.yarnpkg.com/react-native-mask-text/-/react-native-mask-text-0.13.1.tgz#d57f25efe869e2ee24c6e92b4aeae576248197ba"
+  integrity sha512-XyCZ6c4n164MWn20XnJzkBMKyKzyaeN19JAyg62dEnielx9VeUNw4vDYyDTUunw8elY1JKtn49PWjjXVPQYJhQ==
+  dependencies:
+    bignumber.js "^9.0.1"
 
 react-native-web@~0.18.7:
   version "0.18.9"

@@ -1,11 +1,14 @@
 import React, { useState, useRef } from 'react';
 import { Text, View, TextInput, TouchableOpacity, StyleSheet, SafeAreaView, Image, Keyboard } from 'react-native';
 import api from './src/services/api';
+import { MaskedTextInput } from 'react-native-mask-text';
 
 export default function App() {
+  
   const [cep, setCep] = useState();
-  const inputRef = useRef(null);
   const [cepUser, setCepUser] = useState(null);
+
+  const inputRef = useRef(null);
 
   async function buscar() {
     if(cep == ''){
@@ -20,7 +23,7 @@ export default function App() {
       Keyboard.dismiss(); // fecha teclado
     
      } catch(error) {
-      console.log('ERROR: ' + error);
+      alert('Algo saiu errado!');
      }
   }
 
@@ -35,14 +38,15 @@ export default function App() {
     <SafeAreaView style={styles.container}>
       <Image source={require('./src/img/logo.png') }style={{width:300, height:150, marginBottom:50}} />
       
-      <TextInput
-      style={[styles.input,{textAlign:'center'}]}
+      <MaskedTextInput
+      mask='99999-999'
+      style={styles.input}
+      placeholderTextColor={'#000'}
       placeholder="Digite seu cep desejado"
       value={cep}
       onChangeText={(texto) => setCep(texto)}
       keyboardType="numeric"
       ref={inputRef}
-      maxLength={8}
       />
       <View style={styles.areaBtn}>
         <TouchableOpacity 
@@ -105,12 +109,11 @@ const styles = StyleSheet.create({
     fontWeight:'bold'
   },
   input: {
-    backgroundColor:'#fff',
-    borderWidth:1,
-    borderColor:'#ddd',
-    width:'90%',
-    padding:20,
-    borderRadius:8, fontSize:18
+    textAlign:'center', 
+    borderRadius:5, 
+    padding:15, 
+    backgroundColor:'#fff', 
+    width:'95%'
   },
   areaBtn: {
     flexDirection:'row',
