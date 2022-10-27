@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "slide-view-app",
+    "slug": "slide-view-app",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "slide-view-app"
+}
