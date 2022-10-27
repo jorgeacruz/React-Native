@@ -3,7 +3,10 @@ import { View, Text, StyleSheet } from 'react-native';
 import Routes from './src/routes';
 export default function App() {
  return (
-   <Routes/>
+   
+   <View>
+      <Routes/>
+   </View>
   );
 }
 const styles = StyleSheet.create({
