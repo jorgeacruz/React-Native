@@ -1,5 +1,5 @@
 import React, { useState, useContext  } from 'react';
-import { View, Text, Platform } from 'react-native';
+import { Platform } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { AuthContext } from '../../contexts/auth'
 
@@ -10,12 +10,13 @@ export default function SignIn() {
 
   const navigation = useNavigation();
   const [email, setEmail] = useState();
-  const [senha, setSenha] = useState();
+  const [password, setPassword] = useState();
+  const { signIn } = useContext(AuthContext);
 
 
   
   function handleLogin(){
-   
+   signIn(email,password);
   }
 
  return (
@@ -39,12 +40,12 @@ export default function SignIn() {
             placeholder='Digite sua Senha'
             autoCorrect={true}
             autoCapitalize='none'
-            value={senha}
-            onChangeText={( text ) => setSenha(text)}
+            value={password}
+            onChangeText={( text ) => setPassword(text)}
             />
           </AreaInput>
 
-          <SubmitButton>
+          <SubmitButton onPress={handleLogin}>
             <SubmitText>Acessar</SubmitText>
           </SubmitButton>
 

@@ -5,8 +5,10 @@ import { View, StatusBar } from 'react-native';
 import firebase from './src/services/firebaseConnection';
 import AuthProvider from './src/contexts/auth';
 
-
 import Routes from './src/routes/index';
+
+//desabilita aviso amarelo
+console.disableYellowbox=true;
 
 export default function App() {
 return (

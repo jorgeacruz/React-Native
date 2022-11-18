@@ -1,5 +1,6 @@
 import React, { useState, useContext } from 'react';
 import { Platform } from 'react-native';
+import { AuthContext } from '../../contexts/auth';
 
 
 import { Background, Container, Logo, AreaInput, Input, SubmitButton, 
@@ -9,15 +10,20 @@ export default function SignUp() {
 
   const [nome, setNome] = useState();
   const [email, setEmail] = useState();
-  const [senha, setSenha] = useState();
+  const [password, setPassword] = useState();
+  const { signUp } = useContext(AuthContext);
+
+  function handleCadastrar(){
+    signUp(email, password, nome);
+  }
 
 
  return (
    <Background>
       <Container 
           behavior={Platform.OS === 'ios' ? 'padding' : ''}
-          enabled
-      >
+          enabled>
+
           <Logo source={require('../../assets/Logo1.png')}/>
 
           <AreaInput>
@@ -43,16 +49,15 @@ export default function SignUp() {
             placeholder='Digite sua Senha'
             autoCorrect={true}
             autoCapitalize='none'
-            value={senha}
-            onChangeText={( text ) => setSenha(text)}
+            value={password}
+            onChangeText={( text ) => setPassword(text)}
             />
           </AreaInput>
 
-          <SubmitButton>
+          <SubmitButton onPress={handleCadastrar}>
             <SubmitText>Cadastrar</SubmitText>
           </SubmitButton>
 
-          
        </Container>
    </Background>
   );

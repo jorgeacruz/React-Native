@@ -3,14 +3,12 @@ import 'firebase/auth';
 import 'firebase/database';
 
 let firebaseConfig = {
-    apiKey: "AIzaSyA9g1JdgAdfLf4mk6vJlq3qinYhU7YUSac",
-    authDomain: "meuapp-3354a.firebaseapp.com",
-    databaseURL: "https://meuapp-3354a.firebaseio.com",
-    projectId: "meuapp-3354a",
-    storageBucket: "meuapp-3354a.appspot.com",
-    messagingSenderId: "842683957873",
-    appId: "1:842683957873:web:1c1e69c05124d5de4b91d0",
-    measurementId: "G-GFJBH5JB9B"
+    apiKey: "AIzaSyCwfL5QuB8vznPsSid6jPWSURGUAkg781k",
+    authDomain: "financial-4b4e4.firebaseapp.com",
+    projectId: "financial-4b4e4",
+    storageBucket: "financial-4b4e4.appspot.com",
+    messagingSenderId: "242733589848",
+    appId: "1:242733589848:web:b51be34f4730bc1375312d"
   };
 
  if(!firebase.apps.length){
