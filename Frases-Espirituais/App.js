@@ -26,11 +26,15 @@ export default function App() {
     'A beleza do dom da humildade é que ela está disponível para todos nós.',
     'Acredite em você mesmo. Você é capaz de muito mais do que imagina.',
     'A Umbanda não faz o mal, quem faz o mal são as pessoas!',
-    'Amar é espontâneo, é natural, espiritual.',
+    
   ];
 
+  function frasedoDia() {
+    let numeroAleatorio = Math.floor(Math.random() * frases.length)
+    setFraseEspiritual(frases[numeroAleatorio]);
+  }
+
   function Limpar(){
-    alert('Campos Limpos');
     setFraseEspiritual('');
   }
   
@@ -40,10 +44,10 @@ export default function App() {
       <StatusBar hidden={true} />
       <Image source={require('./src/image/logo.png')} style={styles.logo}/>
       <View style={styles.areaFrase}>
-
+          <Text style={styles.textoFrase}>{fraseEspiritual}</Text>
       </View>
-      <View>
-        <TouchableOpacity style={styles.btnClear}>
+      <View style={styles.areaBTN}>
+        <TouchableOpacity style={styles.btnClear} onPress={frasedoDia}>
           <Text> Frase do Dia </Text>
         </TouchableOpacity>
 
@@ -64,11 +68,18 @@ const styles = StyleSheet.create({
   },
   logo: {
     width:300,
-    height:300
+    height:300,
+    marginBottom:100
   },
   areaFrase:{
-    justifyContent:'center',
-    alignItems:'center'
+   justifyContent:'center',
+   alignItems:'center',
+   margin:30
+  },
+  textoFrase: {
+    color:'#fff',
+    textAlign:'center',
+    fontSize:20
   },
   btnClear:{
     backgroundColor:'#fff',
@@ -77,5 +88,8 @@ const styles = StyleSheet.create({
     borderRadius:3,
     width:300,
     alignItems:'center',
+  },
+  areaBTN:{
+    marginTop:100
   }
 });
