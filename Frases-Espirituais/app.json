@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "frases-esperituais",
+    "slug": "frases-esperituais",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "frases-esperituais"
+}
