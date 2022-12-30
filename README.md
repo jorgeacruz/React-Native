@@ -7,4 +7,5 @@
 - Finance App (Prototype)
 - Marriage Confirmation
 - Tour Agency (Prototype)
+- Frases Espirituais
 
