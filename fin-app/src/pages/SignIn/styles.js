@@ -2,7 +2,7 @@ import styled from 'styled-components/native';
 
 export const Background = styled.View`
     flex: 1;
-    background-color: #909;
+    background-color: #000;
 `;
 
 export const Container = styled.KeyboardAvoidingView`
@@ -26,7 +26,7 @@ background: #fff;
 width: 90%;
 font-size: 17px;
 padding: 10px;
-border-radius: 8px;
+border-radius: 4px;
 color: #121212;
 text-align:center;
 `;
@@ -35,15 +35,15 @@ export const SubmitButtom = styled.TouchableOpacity`
 margin-bottom: 15px;
 justify-content: center;
 align-items: center;
-background: #000;
+background: #06A547;
 width: 90%;
 font-size: 17px;
 padding: 10px;
-border-radius: 8px;
+border-radius: 4px;
 
 `;
 export const SubmitText = styled.Text`
-color: #fff;
+color: #000;
 `;
 export const Link = styled.TouchableOpacity`
 margin-top: 10px;

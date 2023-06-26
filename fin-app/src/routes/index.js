@@ -8,8 +8,15 @@ import AppRoutes from './app.routes';
 
 export default function Routes(){
 
-    const { signed } = useContext(AuthContext);
-    const loading = false;
+    const { signed, loading } = useContext(AuthContext);
+
+    if(loading){
+        return(
+            <View style={{flex:1, backgroundColor:'#000', justifyContent:"center", alignItems:"center"}}>
+                <ActivityIndicator size={20} color="#f60" /> 
+            </View>
+        )
+    }
 
     return(
         signed ? <AppRoutes/> : <AuthRoutes/>
