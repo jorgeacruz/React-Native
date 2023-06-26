@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "fin-app",
+    "slug": "fin-app",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
