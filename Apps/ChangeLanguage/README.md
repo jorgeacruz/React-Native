@@ -8,5 +8,5 @@ Using i18next and react-i18next libraries, you easy change languege in your app.
 <p>
 <img src='video.gif' />
 </p>
-<p style='text-align:center;'>Dev: Jorge Cruz</p>
+<p style='text-align:center;'>Jorge Cruz</p>
 
