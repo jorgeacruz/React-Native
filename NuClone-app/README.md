@@ -1,2 +1,0 @@
-# NuClone
-Nubank Clone
