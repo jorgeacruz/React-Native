@@ -10,6 +10,5 @@
 
 ## Snacks
 - TouchableOpacity Extras
-- Video
-- Swiper
+- Conversor de Moeda
 
